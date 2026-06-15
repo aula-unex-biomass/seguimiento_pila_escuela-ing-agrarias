@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* ===== ENCABEZADO ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 2rem;
+
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Header oculto */
+    header.hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    /* ===== IFRAME ===== */
+    iframe {
+      border: none;
+      width: 100%;
+      height: calc(100% - 82px);
+      margin-top: 82px;
+    }
+
+    /* ===== AJUSTES PARA MÓVIL ===== */
+    @media (max-width: 768px) {
+      header {
+        padding: 0.5rem 1rem;
+        gap: 0.75rem;
+      }
+
+      header img {
+        height: 32px;
+      }
+
+      header h1 {
+        font-size: 1.1rem;
+      }
+
+      iframe {
+        height: calc(100% - 56px);
+        margin-top: 56px;
+      }
+    }
+
+    /* ===== MÓVIL PEQUEÑO ===== */
+    @media (max-width: 480px) {
+      header img {
+        height: 28px;
+      }
+
+      header h1 {
+        font-size: 1rem;
+      }
+    }
+
+    /* ===== MÓVIL HORIZONTAL ===== */
+    @media (max-height: 500px) and (orientation: landscape) {
+      header {
+        padding: 0.25rem 0.75rem;
+        gap: 0.5rem;
+      }
+
+      header img {
+        height: 24px;
+      }
+
+      header h1 {
+        font-size: 0.9rem;
+        line-height: 1.1;
+      }
+
+      iframe {
+        height: calc(100% - 40px);
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="assets/unex_logo.png" alt="Logo UNEX">
+    <img src="assets/Imagen1.png" alt="Logo 1">
+    <h1>SEGUIMIENTO Tª HR CO2 PILA CÁMARA</h1>
+  </header>
+
+  <iframe
+    src="https://lookerstudio.google.com/embed/reporting/10b173b5-7012-4ae2-bd46-490e38921561/page/zhvuF"
+    allowfullscreen>
+  </iframe>
+
+
+
+</body>
+</html>
